@@ -24,15 +24,18 @@ install_requires = [
     'sentry>=5.4.1',
 ]
 
+
 setup(
-    name='sentry-dingtalk',
-    version='1.1.3',
-    author='guoyong yi',
-    author_email='guoyongyi11@gmail.com',
-    url='https://github.com/gzhappysky/sentry-dingtalk',
-    description='A Sentry extension which integrates with Dinttalk robot.',
+    name='zhangsj/sentry-dingtalk',
+    version='1.0.0',
+    'keywords'='sentry dingding dingtalk',
+    author='ZhangShiJie',
+    author_email='zhangshijie62302@offcn.com',
+    url='https://github.com/zhangshj/sentry-dingtalk.git',
+    description='A Sentry extension which integrates with Dingtalk robot.',
     long_description=__doc__,
     license='BSD',
+    platforms='any',
     packages=find_packages(exclude=['tests']),
     zip_safe=False,
     install_requires=install_requires,
@@ -53,3 +56,4 @@ setup(
         'Topic :: Software Development'
     ],
 )
+

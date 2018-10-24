@@ -54,13 +54,13 @@ class DingtalkForm(notify.NotificationConfigurationForm):
 
  
 class DingtalkPlugin(notify.NotificationPlugin):
-    author = 'guoyong yi'
-    author_url = 'https://github.com/gzhappysky/sentry-dingtalk'
+    author = 'ZhangShiJie'
+    author_url = 'https://github.com/zhangshj/sentry-dingtalk'
     version = sentry.VERSION
     description = "Integrates dingtalk robot."
     resource_links = [
-        ('Bug Tracker', 'https://github.com/gzhappysky/sentry-dingtalk/issues'),
-        ('Source', 'https://github.com/gzhappysky/sentry-dingtalk'),
+        ('Bug Tracker', 'https://github.com/zhangshj/sentry-dingtalk/issues'),
+        ('Source', 'https://github.com/zhangshj/sentry-dingtalk'),
     ]
 
     slug = 'dingtalk'
@@ -81,7 +81,7 @@ class DingtalkPlugin(notify.NotificationPlugin):
             'label': 'dingtalk robot url',
             'type': 'textarea',
             'help': 'Enter dingtalk robot url.',
-            'placeholder': 'https://oapi.dingtalk.com/robot/send?access_token=9bacf9b193f',
+            'placeholder': 'https://oapi.dingtalk.com/robot/send?access_token=abcdefg',
             'validators': [validate_urls],
             'required': False
         }] 

@@ -102,7 +102,7 @@ class DingtalkPlugin(notify.NotificationPlugin):
 
     def get_group_url(self, group):
         return absolute_uri(reverse('sentry-group', args=[
-            group.team.slug,
+            '',#group.team.slug,
             group.project.slug,
             group.id,
         ]))

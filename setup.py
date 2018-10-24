@@ -26,7 +26,7 @@ install_requires = [
 
 
 setup(
-    name='zhangsj/sentry-dingtalk',
+    name='sentry-dingtalk-new',
     version='1.0.0',
     keywords='sentry dingding dingtalk',
     author='ZhangShiJie',

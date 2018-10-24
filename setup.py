@@ -28,7 +28,7 @@ install_requires = [
 setup(
     name='zhangsj/sentry-dingtalk',
     version='1.0.0',
-    'keywords'='sentry dingding dingtalk',
+    keywords='sentry dingding dingtalk',
     author='ZhangShiJie',
     author_email='zhangshijie62302@offcn.com',
     url='https://github.com/zhangshj/sentry-dingtalk.git',

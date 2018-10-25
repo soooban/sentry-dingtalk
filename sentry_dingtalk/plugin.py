@@ -101,11 +101,14 @@ class DingtalkPlugin(notify.NotificationPlugin):
         )
 
     def get_group_url(self, group):
+        '''
         return absolute_uri(reverse('sentry-group', args=[
-            '',#group.team.slug,
+            group.organization.slug,
             group.project.slug,
             group.id,
         ]))
+        '''
+        return absolute_uri(group.get_absolute_url())
 
     def notify_users(self, group, event, fail_silently=False): 
         url = self.get_webhook_urls(group.project)

@@ -34,6 +34,7 @@ setup(
     url='https://github.com/zhangshj/sentry-dingtalk.git',
     description='A Sentry extension which integrates with Dingtalk robot.',
     long_description=__doc__,
+    long_description_content_type='text/markdown',
     license='BSD',
     platforms='any',
     packages=find_packages(exclude=['tests']),

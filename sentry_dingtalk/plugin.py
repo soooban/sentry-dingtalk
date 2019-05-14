@@ -110,7 +110,7 @@ class DingtalkPlugin(notify.NotificationPlugin):
         '''
         return absolute_uri(group.get_absolute_url())
 
-    def notify_users(self, group, event, fail_silently=False): 
+    def notify_users(self, group, event, *args, **kwargs): 
         url = self.get_webhook_urls(group.project)
         link = self.get_group_url(group)
         message_format = '[%s] %s   %s'

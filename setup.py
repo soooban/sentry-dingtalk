@@ -21,13 +21,13 @@ tests_require = [
 ]
 
 install_requires = [
-    'sentry>=9.0.0',
+    'sentry>=9.1.0',
 ]
 
 
 setup(
     name='sentry-dingtalk-new',
-    version='1.0.4',
+    version='1.1.0',
     keywords='sentry dingding dingtalk',
     author='ZhangShiJie',
     author_email='zhangshijie62302@offcn.com',

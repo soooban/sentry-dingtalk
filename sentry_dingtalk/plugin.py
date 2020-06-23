@@ -111,16 +111,16 @@ class DingtalkPlugin(notify.NotificationPlugin):
         return absolute_uri(group.get_absolute_url())
 
     def notify_users(self, group, event, *args, **kwargs): 
+        if group.is_ignored():
+            return
         url = self.get_webhook_urls(group.project)
         link = self.get_group_url(group)
         message_format = '[%s] %s   %s'
-        message = message_format % (event.server_name, event.message, link)
+        message = message_format % (event.title, event.message, link)
         data = {"msgtype": "text",
                     "text": {
                         "content": message
                     }
                 }
         headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
-        r = requests.post(url, data=json.dumps(data), headers=headers)
-
- 
+        requests.post(url, data=json.dumps(data), headers=headers)

@@ -111,6 +111,8 @@ class DingtalkPlugin(notify.NotificationPlugin):
         return absolute_uri(group.get_absolute_url())
 
     def notify_users(self, group, event, *args, **kwargs): 
+        if not self.is_configured(group.project):
+            return
         if group.is_ignored():
             return
         url = self.get_webhook_urls(group.project)

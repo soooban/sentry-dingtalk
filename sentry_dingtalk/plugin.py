@@ -113,7 +113,7 @@ class DingtalkPlugin(notify.NotificationPlugin):
     def notify_users(self, group, event, *args, **kwargs): 
         if not self.is_configured(group.project):
             return
-        if group.is_ignored():
+        if group.is_ignored() or event.get_environment().name != "production":
             return
         url = self.get_webhook_urls(group.project)
         link = self.get_group_url(group)
